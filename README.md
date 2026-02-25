@@ -1,4 +1,4 @@
-# 🏠 Mortgage Calculator Web Application
+#  Mortgage Calculator Web Application
 
 A modern and user-friendly Mortgage Calculator web application that helps users calculate their monthly EMI (Equated Monthly Installment) and visualize loan repayment details.
 
