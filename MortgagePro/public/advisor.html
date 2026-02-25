@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Mortgage Advisor – MortgagePro Premium</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <div id="three-bg-container"></div>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <nav>
+        <a href="/" class="nav-logo">🏠 MortgagePro</a>
+        <div class="nav-links">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/emi-calculator" class="nav-link">EMI Calculator</a>
+            <a href="/buy-vs-rent" class="nav-link">Buy vs Rent</a>
+            <a href="/prepayment" class="nav-link">Prepayment</a>
+            <a href="/advisor" class="nav-link active">AI Advisor</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container" style="max-width: 900px;">
+            <section class="glass-card">
+                <h2>AI Mortgage <span class="text-gradient">Advisor</span></h2>
+                <div class="chat-box" id="chat-box">
+                    <div class="bot-msg">👋 Hello! I'm your AI Mortgage Advisor. Ask me anything about mortgages, EMI,
+                        renting vs buying, or prepayment strategies. How can I help you today?</div>
+                </div>
+                <form id="chat-form" style="display: flex; gap: 1rem;">
+                    <input type="text" id="chat-input" placeholder="Ask your mortgage question..." required
+                        style="flex: 1; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); padding: 1.2rem; border-radius: 18px; color: #fff; font-size: 1rem; outline: none;">
+                    <button type="submit" class="cta-btn" style="width: auto; padding: 0 2rem;">Send</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 MortgagePro. Intelligent financial guidance powered by AI.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

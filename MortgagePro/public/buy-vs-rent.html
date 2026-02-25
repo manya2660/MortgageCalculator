@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy vs Rent Analyzer – MortgagePro Premium</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <div id="three-bg-container"></div>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <nav>
+        <a href="/" class="nav-logo">🏠 MortgagePro</a>
+        <div class="nav-links">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/emi-calculator" class="nav-link">EMI Calculator</a>
+            <a href="/buy-vs-rent" class="nav-link active">Buy vs Rent</a>
+            <a href="/prepayment" class="nav-link">Prepayment</a>
+            <a href="/advisor" class="nav-link">AI Advisor</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="glass-card">
+                <h2>Buy vs Rent <span class="text-gradient">Analyzer</span></h2>
+                <div class="grid-2">
+                    <div class="form-container">
+                        <form id="rent-form">
+                            <div class="input-group">
+                                <label>Monthly Rent ($)</label>
+                                <input type="number" id="monthlyRent" placeholder="e.g. 2000" required>
+                            </div>
+                            <div class="input-group">
+                                <label>Property Price ($)</label>
+                                <input type="number" id="propertyPrice" placeholder="e.g. 400000" required>
+                            </div>
+                            <div class="input-group">
+                                <label>Duration (Years)</label>
+                                <input type="number" id="rentYears" placeholder="e.g. 10" required>
+                            </div>
+                            <div class="input-group">
+                                <label>Annual Appreciation (%)</label>
+                                <input type="number" step="0.1" id="appreciation" placeholder="e.g. 4.0" required>
+                            </div>
+                            <button type="submit" class="cta-btn">Analyze Strategy</button>
+                        </form>
+                    </div>
+
+                    <div id="rent-results" style="display: none;">
+                        <div class="bento-grid">
+                            <div class="bento-item full" style="border-left: 5px solid var(--primary);">
+                                <p id="res-rent-suggestion" style="font-weight: 600; font-size: 1.3rem;">--</p>
+                            </div>
+                            <div class="bento-item">
+                                <span>Total Rent Expense</span>
+                                <strong id="res-total-rent">$0.00</strong>
+                            </div>
+                            <div class="bento-item">
+                                <span>Future Prop. Value</span>
+                                <strong id="res-future-val">$0.00</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 MortgagePro. Intelligent residential analysis.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
